@@ -1,68 +1,62 @@
-  li {
-    font-weight: 400;
-    margin-top: 4px;
-    display: inline;
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+a {
+  text-decoration: none;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h3 {
+  text-align: center; margin-bottom: 0;
+}
+h4 {
+  position: relative;
+}
+.grid {
+  margin: 0;
+}
+.col-1-4 {
+  width: 25%;
+}
+.module {
+  padding: 20px;
+  text-align: center;
+  color: #eee;
+  max-height: 120px;
+  min-width: 120px;
+  background-color: #607D8B;
+  /*border-radius: 0px;*/
+}
+.module:hover {
+  background-color: #EEE;
+  cursor: pointer;
+  color: #607d8b;
+}
+.grid-pad {
+  max-width: 200px;
+  padding: 10px 0;
+}
+.grid-pad > [class*='col-']:last-of-type {
+  padding-right: 20px;
+}
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
   }
-  .sidebar-nav {
-      position: absolute;
-      top: 0;
-      width: 250px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+  .module {
+    min-width: 60px;
   }
-
-  .sidebar-nav li {
-      text-indent: 20px;
-      line-height: 40px;
-  }
-
-  .sidebar-nav li a {
-      display: block;
-      text-decoration: none;
-      color: #999999;
-  }
-
-  .sidebar-nav li a:hover {
-      text-decoration: none;
-      color: #fff;
-      background: rgba(255,255,255,0.2);
-  }
-
-  .sidebar-nav li a:active,
-  .sidebar-nav li a:focus {
-      text-decoration: none;
-  }
-
-  .sidebar-nav > .sidebar-brand {
-      height: 65px;
-      font-size: 18px;
-      line-height: 60px;
-  }
-
-  .sidebar-nav > .sidebar-brand a {
-      color: #999999;
-  }
-
-  .sidebar-nav > .sidebar-brand a:hover {
-      color: #fff;
-      background: none;
-  }
-
-  .sidebar-nav button {
-      display: block;
-      width: 100%;
-      text-align: left;
-  }
-
-  .sidebar-nav button.category {
-      background: rgba(0, 0, 0, .10);
-  }
-
-  .sidebar-nav button.indent {
-      padding-left: 28px;
-  }
-
-  .sidebar-nav button.collapse {
-      display: none;
-  }
+}
