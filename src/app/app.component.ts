@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
     <div>
-      <sidemenu-demo>
-      </sidemenu-demo>
+      <sidenav>
+      </sidenav>
     </div>
   `,
   styles: [require('bootstrap/dist/css/bootstrap.min.css')]
