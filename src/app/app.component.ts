@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
-import '../assets/css/styles.css';
+
+
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div>
+      <sidemenu-demo>
+      </sidemenu-demo>
+    </div>
+  `,
+  styles: [require('bootstrap/dist/css/bootstrap.min.css')]
 })
 export class AppComponent { }
