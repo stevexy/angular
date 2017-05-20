@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'my-app',
-  template: `
-    <div>
-      <sidenav>
-      </sidenav>
-    </div>
-  `
-  // styles: [require('bootstrap/dist/css/bootstrap.min.css')]
+  template: require('./app.component.html'),
+  styles: [require('./app.component.css')]
 })
 export class AppComponent { }
