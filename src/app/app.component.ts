@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <sidenav>
       </sidenav>
     </div>
-  `,
-  styles: [require('bootstrap/dist/css/bootstrap.min.css')]
+  `
+  // styles: [require('bootstrap/dist/css/bootstrap.min.css')]
 })
 export class AppComponent { }
