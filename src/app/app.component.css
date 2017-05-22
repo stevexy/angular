@@ -1,10 +1,13 @@
-/*main {
-  padding: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  display: block;
+main {
+    /*padding: 1em;*/
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    text-align: center;
+    /*margin-top: 50px;*/
+    /*display: block;*/
 }
+
+
+/*
 #wrap {
     overflow: hidden; *zoom: 1;
 }
@@ -23,29 +26,39 @@
 /*;height:200px;width:100px;float:left;*/
 
 .parent {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    height: 100%;
 }
 
 .top {
-    height: 100px;
+    height: 150px;
+    background-color: #EEE;
+    text-align: center;
 }
 
 .bottom {
     height: 50px;
+    float: bottom;
 }
 
 .middle {
-    flex: 1;
-    display: flex;
+    /*flex: 1;*/
+    /*display: flex;*/
+    height: 100%;
 }
 
 .left {
     width: 200px;
-    /*background-color: #A9A9A9;*/
+    /*height: 800px;*/
+    height: 100%;
+    /*background-color: #E9E9E9;*/
+    background-color: #EEE;
+    /*float: left;*/
 }
 
 .right {
-    flex: 1;
-    overflow: auto;
+    /*flex: 1;*/
+    /*overflow: auto;*/
+    height: 100%;
 }

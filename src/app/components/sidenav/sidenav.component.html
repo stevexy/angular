@@ -1,11 +1,10 @@
-<h3>Side Nav Bar</h3>
-<div class="grid grid-pad">
+<div class="sidebar">
+    <div class="menuupper"></div>
     <ol class="menulist">
         <li *ngFor="let menuitem of menulist">
             <!--[routerLink]="['/detail', hero.id]"  class="col-1-4">-->
-            <div class="module ppp">
-                <h4>{{menuitem.name}}</h4>
-            </div>
+            <div>{{menuitem.name}}</div>
         </li>
     </ol>
+    <div class="menufooter"></div>
 </div>
