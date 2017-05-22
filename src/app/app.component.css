@@ -32,9 +32,12 @@ main {
 }
 
 .top {
-    height: 150px;
+    height: 120px;
     background-color: #EEE;
     text-align: center;
+    color: #333;
+    padding: 2% 0 0 0;
+    /*margin: 10px 9px 8px 7px;*/
 }
 
 .bottom {
