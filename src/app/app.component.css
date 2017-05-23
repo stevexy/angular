@@ -1,41 +1,8 @@
-body {
-    width: 100%;
+.wrap {
+    /*display: flex;*/
+    /*flex-direction: column;*/
     height: 100%;
-    margin: 1px 2px 3px 4px;
-    padding: 0px;
 }
-
-
-main {
-    /*padding: 1em;*/
-    /*font-family: Arial, Helvetica, sans-serif;*/
-    text-align: center;
-
-            width: 100%;
-            height: 100%;
-    /*margin-top: 50px;*/
-    /*display: block;*/
-}
-
-
-
-/*
-#wrap {
-    overflow: hidden; *zoom: 1;
-}
-#content ,#sidebar {
-  background-color: #eee; 
-}
-#sidebar {
-  float: right; width: 300px;
-}
-#content {
-  margin-right: 310px;
-}
-#footer {background-color: #f00;color:#fff; margin-top: 1em}*/
-
-
-/*;height:200px;width:100px;float:left;*/
 
 .parent {
     /*display: flex;*/
@@ -44,19 +11,23 @@ main {
 }
 
 .top {
-    height: 120px;
+    height: 80px;
     background-color: #CFD8DC;
     text-align: center;
     color: #fff;
-
     /*padding: 2% 0 0 0;*/
     /*margin: 10px 9px 8px 7px;*/
 }
 
 .title {
-    position: relative; /*脱离文档流*/
-    top: 50%; /*偏移*/
-    transform: translateY(-50%);
+    text-shadow: 2px 3px 5px #000;
+    /*position: relative;*/
+    /*脱离文档流*/
+    /*top: 50%;*/
+    margin: 0px;
+    /*偏移*/
+    /*transform: translateY(-50%);*/
+    line-height: 80px;
 }
 
 .bottom {
@@ -73,7 +44,7 @@ main {
 .left {
     width: 200px;
     /*height: 800px;*/
-    height: 100%;
+    height: calc(100% - 80px);
     /*background-color: #E9E9E9;*/
     background-color: #C0D0D0;
     /*float: left;*/

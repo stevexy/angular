@@ -5,24 +5,20 @@
 
 .menulist {
     margin: 0;
-    /*margin: 0 0 auto 0;*/
     list-style-type: none;
     padding: 0;
     width: 100%;
-    /*overflow: hidden;*/
 }
 
 .menulist li {
+    text-shadow: 2px 3px 5px #000;
     cursor: pointer;
     position: relative;
-    /*margin: 0 auto;*/
     left: 0;
     background-color: #CFD8DC;
-    /*margin: .5em;*/
     padding: .3em 0;
     height: 1.6em;
     color: white;
-    /*border-radius: 0px;*/
 }
 
 .sidebar {
@@ -31,7 +27,6 @@
 
 .menulist li div {
     text-align: center;
-    /*margin: auto auto;*/
 }
 
 .menulist li.selected:hover {
@@ -51,7 +46,7 @@
 }
 
 .menuupper {
-    height: 20px;
+    height: 80px;
 }
 
 .menufooter {
