@@ -40,6 +40,12 @@
     left: .1em;
 }
 
+.menulist li:disabled {
+    color: #403443;
+    background-color: #777;
+    left: .1em;
+}
+
 .menulist .text {
     position: relative;
     top: -3px;
