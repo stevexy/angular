@@ -4,12 +4,11 @@
 }
 
 .menulist {
+    margin: 0;
     /*margin: 0 0 auto 0;*/
     list-style-type: none;
     padding: 0;
     width: 100%;
-    /*margin-bottom: -400px;*/
-    /*padding-bottom: 3000px;*/
     /*overflow: hidden;*/
 }
 
@@ -18,20 +17,21 @@
     position: relative;
     /*margin: 0 auto;*/
     left: 0;
-    background-color: #EEE;
+    background-color: #CFD8DC;
     /*margin: .5em;*/
     padding: .3em 0;
     height: 1.6em;
+    color: white;
     /*border-radius: 0px;*/
 }
 
 .sidebar {
-    height: 80%;
+    height: 100%;
 }
 
 .menulist li div {
     text-align: center;
-    margin: auto auto;
+    /*margin: auto auto;*/
 }
 
 .menulist li.selected:hover {
