@@ -56,8 +56,10 @@
 .content {
     /*height: 100%;*/
     width: calc(100% - 130px);
+    height: 100%;
     position: absolute;
     right: 0px;
     top: 0px;
     overflow-y: auto;
+    background-color: gray;
 }

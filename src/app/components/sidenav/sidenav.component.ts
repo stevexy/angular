@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from './menuitem';
 // import { HeroService } from './hero.service';
 import { ContentChildren, QueryList } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 const MENULIST: MenuItem[] = [
@@ -30,7 +31,8 @@ export class SideNavComponent implements OnInit {
   clickMessage = '';
 
   // heroes: Hero[] = [];
-  // constructor(private heroService: HeroService) { }
+  constructor(private router: Router) { }
+  
   ngOnInit(): void {
     // this.heroService.getHeroes()
     // .then(heroes => this.heroes = heroes.slice(1, 5));
@@ -40,7 +42,7 @@ export class SideNavComponent implements OnInit {
     let activeMenu = this.menulist.filter((mitem) => mitem.disabled);
     // if there is no active tab set, activate the first
     if (activeMenu.length === 0) {
-      this.onSelect(this.menulist[0]);
+      // this.onSelect(this.menulist[0]);
     }
   }
 
@@ -53,6 +55,9 @@ export class SideNavComponent implements OnInit {
     console.log('click click click');
     // this.menulist.forEach(item => item.disabled = false);
     // mi.disabled = true;
-    // this.clickMessage = '..clicked' + this.menulist.indexOf(mi);
+    this.clickMessage = '..clicked..' + this.menulist.indexOf(mi);
+
+    this.router.navigate(['../contentbox', ]);
+    
   }
 }
