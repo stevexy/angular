@@ -24,8 +24,10 @@ export class SideNavComponent implements OnInit {
   @ContentChildren(MenuItem) li: QueryList<MenuItem>;
 
   menulist = MENULIST;
-  
+
   selectedItem :MenuItem;
+
+  clickMessage = '';
 
   // heroes: Hero[] = [];
   // constructor(private heroService: HeroService) { }
@@ -43,8 +45,14 @@ export class SideNavComponent implements OnInit {
   }
 
   onSelect(mi: MenuItem): void {
-    
-    this.menulist.forEach(item => item.disabled = false);
-    mi.disabled = true;
+    if(this.selectedItem === mi) {
+      return;
+    }
+
+    this.selectedItem = mi;
+    console.log('click click click');
+    // this.menulist.forEach(item => item.disabled = false);
+    // mi.disabled = true;
+    // this.clickMessage = '..clicked' + this.menulist.indexOf(mi);
   }
 }

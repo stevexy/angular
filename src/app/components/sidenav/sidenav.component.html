@@ -1,10 +1,11 @@
 <div class="sidebar">
     <div class="menuupper"></div>
     <ol class="menulist">
-        <li *ngFor="let menuitem of menulist " [class.selected]="menuitem === selectedItem" (click)="onSelect(menuitem)">
+        <li *ngFor="let menuitem of menulist " [class.unselected]="menuitem !== selectedItem" [class.selected]="menuitem === selectedItem" (click)="onSelect(menuitem)">
             <!--[routerLink]="['/detail', hero.id]"  class="col-1-4">-->
             <div>{{menuitem.name}}</div>
         </li>
     </ol>
+    {{clickMessage}}
     <!--<div class="menufooter"></div>-->
 </div>

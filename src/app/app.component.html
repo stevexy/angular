@@ -1,14 +1,24 @@
 <div class="wrap">
     <div class="parent">
-        <div class="top">
+        <div class="top" [style.position]="'relative'">
             <h1 class="title">开发者上传管理页面</h1>
+            <div [style.position]="'absolute'" [style.top.%]="40" [style.right.px]="30">
+                <span>username</span>
+            </div>
+            <!--<p style="float:right">username</p>-->
+            <!--<p>注销</p>-->
         </div>
-        <div class="left">
-            <sidenav>
-            </sidenav>
+        <div class="middle">
+            <div class="left">
+                <sidenav>
+                </sidenav>
+            </div>
+            <div class="content">
+                <span>dlink</span>
+            </div>
         </div>
-        <!--<div class="middle"></div>-->
-        <!--<div class="right">right</div>-->
-        <!--<div class="bottom">bottom</div>-->
+    </div>
+    <div class="bottom">
+        <p class="license">@mc.163.com</p>
     </div>
 </div>
