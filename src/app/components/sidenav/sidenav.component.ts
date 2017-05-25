@@ -52,10 +52,11 @@ export class SideNavComponent implements OnInit {
     }
     this.selectedItem = mi;
 
-    // if (mi.id == 4)
-    //   this.router.navigate(['/contentbox/profit']);
-    // else
-    this.router.navigate(['/contentbox', mi.id]);
+    if (mi.id == 4)
+      this.router.navigate(['/tabmenu']);
+      // app/profit/tabmenu.module
+    else
+      this.router.navigate(['/contentbox', mi.id]);
 
   }
 }

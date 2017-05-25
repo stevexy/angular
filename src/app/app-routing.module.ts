@@ -1,15 +1,20 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContentComponent }   from './components/contentbox/contentbox.component';
+import { ContentComponent } from './components/contentbox/contentbox.component';
 
 const routes: Routes = [
-  { path: 'contentbox/:id',  component: ContentComponent },
-  { path: 'contentbox',  component: ContentComponent },
+  { path: 'contentbox', component: ContentComponent },
+  { path: 'contentbox/:id', component: ContentComponent },
   // { path: '', redirectTo: '/contentbox', pathMatch: 'full' },
+  {
+    path: 'tabmenu',
+    loadChildren: 'app/components/profit/tabmenu.module#TabmenuModule',
+    data: { preload: true }
+  }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
