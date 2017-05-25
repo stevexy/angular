@@ -1,0 +1,12 @@
+<div class="tabmenu">
+    <ol class="menulist">
+        <li *ngFor="let menuitem of menulist " 
+            [class.unselected]="menuitem !== selectedItem" 
+            [class.selected]="menuitem === selectedItem" 
+            (click)="onSelect(menuitem)"
+            [style.float]="'left''">
+            <div>{{menuitem.name}}</div>
+        </li>
+    </ol>
+    <router-outlet></router-outlet>
+</div>

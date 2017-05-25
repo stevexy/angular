@@ -1,0 +1,25 @@
+<div class="pftable">
+    <table>
+        <thead>
+            <tr>
+                <td>序号</td>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>手机号</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="list in lists">
+                <td ng-bind="list.id"></td>
+                <td ng-bind="list.name"></td>
+                <td ng-bind="list.age"></td>
+                <td ng-bind="list.phoneNum"></td>
+                <td>
+                    <button ng-if="list.power == 1">删除</button>
+                    <button ng-if="list.power == 1">修改</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
