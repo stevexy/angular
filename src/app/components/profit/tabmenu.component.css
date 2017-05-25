@@ -1,0 +1,56 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+}
+
+.menulist {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menulist li {
+    text-shadow: 2px 3px 5px #000;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #CFD8DC;
+    padding: .3em 0;
+    height: 1.6em;
+    color: white;
+    width: 8em;
+    margin: 0.02em;
+    border-radius: 8px; /* FIXME hardcoded value :-/ */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.menulist li div {
+    text-align: center;
+}
+
+.menulist li.selected {
+    background-color: #BBD8DC !important;
+    color: gray;
+    cursor: default;
+    text-shadow: 0px 0px 0px #000;
+}
+
+.menulist li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: gray;
+    cursor: default;
+}
+
+.menulist li.unselected:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+
+.menulist .text {
+    position: relative;
+    top: -3px;
+}
+

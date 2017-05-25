@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { profitcheckComponent } from '../profit/profitcheck.component';
+// import { profitcheckComponent } from '../profit/profitcheck.component';
 import { tabmenuComponent } from '../profit/tabmenu.component'
 
 
-const profitRoutes: Routes = [
+const contentRoutes: Routes = [
   {
     path: 'profit',
-    component: tabmenuComponent,
-    children: [
-      {
-        path: ':id',
-        component: profitcheckComponent,
-      }
-    ]
+    component: tabmenuComponent
+    // children: [
+    //   {
+    //     path: ':id',
+    //     component: profitcheckComponent,
+    //   }
+    // ]
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(profitRoutes)
+    RouterModule.forChild(contentRoutes)
   ],
   exports: [
     RouterModule
   ]
 })
-export class ProfitRoutingModule { }
+export class contentRoutingModule { }

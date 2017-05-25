@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: 'tabmenu',
     loadChildren: 'app/components/profit/tabmenu.module#TabmenuModule',
+    // https://damienbod.com/2017/01/14/angular-2-lazy-loading-with-webpack-2/
     data: { preload: true }
   }
 ];

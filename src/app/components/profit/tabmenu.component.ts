@@ -20,11 +20,21 @@ const MENULIST: MenuItem[] = [
 
 export class tabmenuComponent implements OnInit {
   clickMessage = 'this is profitcheck';
+  menulist = MENULIST;
+
+  selectedItem: MenuItem;  
   constructor(
     private route: ActivatedRoute,
     private location: Location
   ) { }
   ngOnInit(): void {
+    console.log("click click click")
   }
+  onSelect(mi: MenuItem): void {
+    if (this.selectedItem === mi) {
+      return;
+    }
+    this.selectedItem = mi;
+  }  
 
 }

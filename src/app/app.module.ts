@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SideNavComponent } from './components/sidenav/sidenav.component';
 import { ContentComponent } from './components/contentbox/contentbox.component';
-import { AppRoutingModule }     from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { TabmenuModule } from './components/profit/tabmenu.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
-    // NgbModule.forRoot()
+    AppRoutingModule,
+    TabmenuModule
+    
   ],
   declarations: [
     AppComponent,

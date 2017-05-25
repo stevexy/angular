@@ -3,6 +3,7 @@ import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 
 import { ProfitRoutingModule } from './profit-routing.module';
+import { tabmenuComponent } from './tabmenu.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { ProfitRoutingModule } from './profit-routing.module';
     ProfitRoutingModule
   ],
   declarations: [
+    tabmenuComponent
 
   ],
   providers: [ ]
