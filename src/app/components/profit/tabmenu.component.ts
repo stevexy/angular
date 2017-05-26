@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MenuItem } from './menuitem';
+import { ContentChildren, QueryList } from '@angular/core';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -20,7 +21,8 @@ const MENULIST: MenuItem[] = [
 
 
 export class tabmenuComponent implements OnInit {
-  clickMessage = 'this is profitcheck';
+  @ContentChildren(MenuItem) li: QueryList<MenuItem>;
+  
   menulist = MENULIST;
 
   selectedItem: MenuItem;  
@@ -30,15 +32,24 @@ export class tabmenuComponent implements OnInit {
     private location: Location
   ) { }
   ngOnInit(): void {
-    
   }
+
+  ngAfterContentInit() {
+    let activeMenu = this.menulist.filter((mitem) => mitem.disabled);
+    // if there is no active tab set, activate the first
+    if (activeMenu.length === 0) {
+      this.onSelect(this.menulist[0]);
+    }
+  }
+
   onSelect(mi: MenuItem): void {
     if (this.selectedItem === mi) {
       return;
     }
     this.selectedItem = mi;
-    console.log("click click 0000"+mi.id)
-    this.router.navigate(['./formgame',mi.id],{ relativeTo: this.route });
+    console.log("click click 0000"+this.router.url)
+    
+    this.router.navigate(['profixs/formgame',mi.id],);
   }  
 
 }

@@ -23,7 +23,7 @@ const profitRoutes: Routes = [
       { path: '', component: profitcheckComponent, }
     ]
   },
-  {path: '',   redirectTo: 'formgame/1', pathMatch: 'full'}
+  {path: '',   component: tabmenuComponent}
 ];
 
 @NgModule({

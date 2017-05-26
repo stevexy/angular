@@ -42,7 +42,7 @@ export class SideNavComponent implements OnInit {
     let activeMenu = this.menulist.filter((mitem) => mitem.disabled);
     // if there is no active tab set, activate the first
     if (activeMenu.length === 0) {
-      // this.onSelect(this.menulist[0]);
+      this.onSelect(this.menulist[0]);
     }
   }
 
