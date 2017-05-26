@@ -7,15 +7,16 @@ import { AppComponent } from './app.component';
 import { SideNavComponent } from './components/sidenav/sidenav.component';
 import { ContentComponent } from './components/contentbox/contentbox.component';
 import { AppRoutingModule } from './app-routing.module';
-import { TabmenuModule } from './components/profit/tabmenu.module';
+// import { TabmenuModule } from './components/profit/tabmenu.module';
+// import { ContentBoxModule } from './components/contentbox/contentbox.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    TabmenuModule
-    
+    // TabmenuModule,
+    // ContentBoxModule
   ],
   declarations: [
     AppComponent,

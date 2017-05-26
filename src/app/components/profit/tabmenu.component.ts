@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MenuItem } from './menuitem';
 
@@ -24,17 +25,20 @@ export class tabmenuComponent implements OnInit {
 
   selectedItem: MenuItem;  
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private location: Location
   ) { }
   ngOnInit(): void {
-    console.log("click click click")
+    
   }
   onSelect(mi: MenuItem): void {
     if (this.selectedItem === mi) {
       return;
     }
     this.selectedItem = mi;
+    console.log("click click 0000"+mi.id)
+    this.router.navigate(['./formgame',mi.id],{ relativeTo: this.route });
   }  
 
 }

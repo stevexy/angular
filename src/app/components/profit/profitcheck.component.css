@@ -1,0 +1,26 @@
+.pftable {
+  /*font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pftable td,
+.pftable th {
+  font-size: 1em;
+  border: 1px solid #ffffff;
+  padding: 3px 7px 2px 7px;
+  background-color: #dddddd;
+}
+
+.pftable th {
+  font-size: 1.1em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  color: #ffffff;
+}
+
+.pftable tr.alt td {
+  color: #000000;
+  background-color: #eaf2d3;
+}

@@ -1,13 +1,11 @@
 <div class="tabmenu">
-    this is a message
     <ol class="menulist">
-        <li *ngFor="let menuitem of menulist " 
-            [class.unselected]="menuitem !== selectedItem" 
-            [class.selected]="menuitem === selectedItem" 
-            (click)="onSelect(menuitem)"
-            [style.float]="'left'">
+        <li *ngFor="let menuitem of menulist " [class.unselected]="menuitem !== selectedItem" [class.selected]="menuitem === selectedItem"
+            (click)="onSelect(menuitem)" [style.float]="'left'">
             <div>{{menuitem.name}}</div>
         </li>
     </ol>
+</div>
+<div>
     <router-outlet></router-outlet>
 </div>

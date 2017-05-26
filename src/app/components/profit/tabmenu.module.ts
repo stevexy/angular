@@ -4,6 +4,7 @@ import { FormsModule }    from '@angular/forms';
 
 import { ProfitRoutingModule } from './profit-routing.module';
 import { tabmenuComponent } from './tabmenu.component';
+import { profitcheckComponent} from './profitcheck.component';
 
 @NgModule({
   imports: [
@@ -12,8 +13,8 @@ import { tabmenuComponent } from './tabmenu.component';
     ProfitRoutingModule
   ],
   declarations: [
-    tabmenuComponent
-
+    tabmenuComponent,
+    profitcheckComponent
   ],
   providers: [ ]
 })

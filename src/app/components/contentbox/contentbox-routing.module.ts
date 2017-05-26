@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { profitcheckComponent } from '../profit/profitcheck.component';
-import { tabmenuComponent } from '../profit/tabmenu.component'
+import { profitcheckComponent } from '../profit/profitcheck.component';
+// import { tabmenuComponent } from '../profit/tabmenu.component'
 
 
 const contentRoutes: Routes = [
   {
     path: 'profit',
-    component: tabmenuComponent
+    component: profitcheckComponent,
     // children: [
-    //   {
-    //     path: ':id',
-    //     component: profitcheckComponent,
-    //   }
+    //   { path: '', component: profitcheckComponent }
     // ]
   }
 ];
