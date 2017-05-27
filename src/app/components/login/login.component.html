@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://abs.twimg.com/a/1495774371/css/t1/twitter_core.bundle.css">
+<link rel="stylesheet" href="https://abs.twimg.com/a/1495774371/css/t1/twitter_more_1.bundle.css">
+<link rel="stylesheet" href="https://abs.twimg.com/a/1495774371/css/t1/twitter_more_2.bundle.css">
+
+<div class="modal modal-large draggable" 
+    id="login-dialog-dialog" role="dialog" aria-labelledby="login-dialog-header" style="top: 294px; left: 411px;">
+    <div class="js-first-tabstop" tabindex="0"></div>
+    <div class="LoginDialog-content modal-content" role="document">
+        <div class="modal-header">
+            <h3 class="modal-title" id="login-dialog-header">Log in to Twitter</h3>
+        </div>
+        <div class="LoginDialog-body modal-body">
+            <div class="LoginDialog-bird">
+                <span class="Icon Icon--bird Icon--large"></span>
+            </div>
+            <div class="LoginDialog-form">
+                <form action="https://twitter.com/sessions" class="LoginForm js-front-signin" 
+                    method="post" data-component="dialog" data-element="login">
+                    <div class="LoginForm-input LoginForm-username">
+                        <input type="text" class="text-input email-input js-signin-email" 
+                            name="session[username_or_email]" autocomplete="username"
+                            placeholder="Phone, email or username">
+                    </div>
+
+                    <div class="LoginForm-input LoginForm-password">
+                        <input type="password" class="text-input" 
+                            name="session[password]" 
+                            placeholder="Password" 
+                            autocomplete="current-password">
+                    </div>
+
+                    <div class="LoginForm-rememberForgot">
+                        <label>
+                            <input type="checkbox" value="1" name="remember_me" checked="checked">
+                            <span>Remember me</span>
+                        </label>
+                        <span class="separator">·</span>
+                        <a class="forgot" href="/account/begin_password_reset" rel="noopener">Forgot password?</a>
+                    </div>
+
+                    <input type="submit" class="submit btn primary-btn js-submit" value="Log in">
+
+                    <input type="hidden" name="return_to_ssl" value="true">
+
+                    <input type="hidden" name="scribe_log">
+                    <input type="hidden" name="redirect_after_login" value="/">
+                    <input type="hidden" value="4933331b5fa82c8865f3610812bd558dba76df37" name="authenticity_token">
+                    <input type="hidden" name="ui_metrics" autocomplete="off" 
+                        value="{&quot;rf&quot;:{&quot;af19a58de91d5cebb3efa78e925833484525b2f21e9cf8ef3e3ab4570d564793&quot;:28,&quot;ab1fd87096253fb662455d7439bf011af30767220f42dd14a3dcfeab586cd88b&quot;:-9,&quot;a294a272bc8b09db22a5b0407bcfe7c711db472e7db6421627c0fc7b53dbacc8&quot;:-1,&quot;ac13b2a0d21346e0ef502b1bd8af1538926274215cf9990f0e7ce1ca2c6f94f2&quot;:-78},&quot;s&quot;:&quot;fHIHKcQXe6_UXHmIV2Hv6_OpKBSk1UMN553uIZ2hVcIXKuS4jQjI6KHvrZB7oqAOPjfcOeIDyx4jAnZ4TsMUX9uImJh24ZElnRpcHtYSOpGv2yRSDc-a3aCkKNX7dDz55Bw46ONS4KOJYELlQFycjI20ZNpaxHs-nQuElAibahtyJQXLBZANSkw5dGjzsj5oyHy9vlWLaSXkTK9IFqXxLQS8DdlAaXPSyW7Ke9osIMAEabvQhjCjlEm5aUiJWEJ9CabrBG_4UsCe9zulAANFghKthRudXOGQ7LYBzzN1IK4WbcJ6dOM1c2TYOLpAZDAEwUVE4Nlu9I2obwZdR8O_sgAAAVxI5hsL&quot;}">
+                    <script src="/i/js_inst?c_name=ui_metrics" async=""></script>
+                </form>
+            </div>
+        </div>
+        <div class="LoginDialog-footer modal-footer u-textCenter">
+            Don't have an account? <a class="LoginDialog-signupLink" href="https://twitter.com/signup" rel="noopener">Sign up »</a>
+        </div>
+    </div>
+    <button type="button" class="modal-btn modal-close js-close" aria-controls="login-dialog-dialog">
+  <span class="Icon Icon--close Icon--medium">
+    <span class="visuallyhidden">Close</span>
+  </span>
+</button>
+    <div class="js-last-tabstop" tabindex="0"></div>
+</div>

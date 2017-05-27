@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MenuItem } from './menuitem';
 import { ContentChildren, QueryList } from '@angular/core';
+import { TabmenuService } from './tabmenu.service';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -15,6 +16,9 @@ const MENULIST: MenuItem[] = [
 
 @Component({
   selector: 'tabmenu',
+  // providers: [
+  //   TabmenuService
+  // ],
   template: require('./tabmenu.component.html'),
   styles: [require('./tabmenu.component.css'),]
 })
@@ -22,14 +26,15 @@ const MENULIST: MenuItem[] = [
 
 export class tabmenuComponent implements OnInit {
   @ContentChildren(MenuItem) li: QueryList<MenuItem>;
-  
+
   menulist = MENULIST;
 
-  selectedItem: MenuItem;  
+  selectedItem: MenuItem;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private tabmenuService: TabmenuService
   ) { }
   ngOnInit(): void {
   }
@@ -43,13 +48,20 @@ export class tabmenuComponent implements OnInit {
   }
 
   onSelect(mi: MenuItem): void {
-    if (this.selectedItem === mi) {
+    if (this.tabmenuService.currentMenuItem == mi) {
       return;
     }
+
+    this.tabmenuService.currentMenuItem = mi;
+
+
+    // if (this.selectedItem === mi) {
+    //   return;
+    // }
     this.selectedItem = mi;
     console.log("click click 0000"+this.router.url)
-    
-    this.router.navigate(['profixs/formgame',mi.id],);
-  }  
+
+    // this.router.navigate(['profixs/formgame',mi.id],);
+  }
 
 }

@@ -6,6 +6,8 @@ import { ProfitRoutingModule } from './profit-routing.module';
 import { tabmenuComponent } from './tabmenu.component';
 import { profitcheckComponent} from './profitcheck.component';
 
+import { TabmenuService } from './tabmenu.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +18,6 @@ import { profitcheckComponent} from './profitcheck.component';
     tabmenuComponent,
     profitcheckComponent
   ],
-  providers: [ ]
+  providers: [ TabmenuService]
 })
 export class TabmenuModule {}

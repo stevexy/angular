@@ -16,14 +16,14 @@ const profitRoutes: Routes = [
   //   ]
   // },
   {
-    path: 'formgame/:id',
+    path: '',
     component: tabmenuComponent,
     children: [
       // { path: ':id', component: profitcheckComponent, },
       { path: '', component: profitcheckComponent, }
     ]
   },
-  {path: '',   component: tabmenuComponent}
+  // {path: '',   component: tabmenuComponent}
 ];
 
 @NgModule({

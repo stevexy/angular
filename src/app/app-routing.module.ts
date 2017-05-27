@@ -7,6 +7,10 @@ const routes: Routes = [
   { path: 'contentbox/:id', component: ContentComponent },
   { path: '', redirectTo: '/contentbox', pathMatch: 'full' },
   
+  { 
+    path: 'login', 
+    loadChildren: 'app/components/login/login.module#LoginDialogModule',
+  },
   {
      path: 'profixs',
      loadChildren: 'app/components/profit/tabmenu.module#TabmenuModule',

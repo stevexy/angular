@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { profitcheckComponent } from '../profit/profitcheck.component';
+import { LoginDialogComponent } from './login.component';
 // import { tabmenuComponent } from '../profit/tabmenu.component'
 
 
-const contentRoutes: Routes = [
+const LoginRoutes: Routes = [
   {
     path: '',
-    component: profitcheckComponent,
+    component: LoginDialogComponent,
     // children: [
     //   { path: '', component: profitcheckComponent }
     // ]
@@ -17,10 +17,10 @@ const contentRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(contentRoutes)
+    RouterModule.forChild(LoginRoutes)
   ],
   exports: [
     RouterModule
   ]
 })
-export class contentRoutingModule { }
+export class LoginRoutingModule { }
