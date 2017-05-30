@@ -53,14 +53,9 @@ export class SideNavComponent implements OnInit {
     this.selectedItem = mi;
 
     if (mi.id == 4)
-      this.router.navigate(['/profixs']);
-      // app/profit/tabmenu.module
-    else if(mi.id == 3)
-    {
-      this.router.navigate(['/login']);
-    }
+      this.router.navigate(['/main/profixs']);
     else
-      this.router.navigate(['/contentbox', mi.id]);
+      this.router.navigate(['/main/contentbox',mi.id]);
 
   }
 }

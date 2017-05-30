@@ -1,0 +1,24 @@
+<div class="wrap">
+    <div class="parent">
+        <div class="top" [style.position]="'relative'">
+            <h1 class="title">开发者上传管理页面</h1>
+            <div [style.position]="'absolute'" [style.top.%]="40" [style.right.em]="2">
+                <span>username</span>
+            </div>
+            <!--<p style="float:right">username</p>-->
+            <!--<p>注销</p>-->
+        </div>
+        <div class="middle">
+            <div class="left">
+                <sidenav>
+                </sidenav>
+            </div>
+            <div class="content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <p class="license">@mc.163.com</p>
+    </div>
+</div>

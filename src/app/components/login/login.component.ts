@@ -1,28 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 
-import 'rxjs/add/operator/switchMap';
+// import { AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
-  selector: 'logindialog',
-  template: require('./login.component.html'),
-  styles: [require('./login.component.css'),]
+    // moduleId: module.id.toString(),
+    selector: 'loginObj',
+    template: require('./login.component.html'),
+    styles: [require('./login.component.css'),]
 })
 
+export class LoginComponent implements OnInit {
+    model: any = {};
+    loading = false;
+    returnUrl: string;
 
-export class LoginDialogComponent implements OnInit {
-  clickMessage = 'this is login dialog';
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location
-  ) { }
-  ngOnInit(): void {
-    this.route.params.switchMap((params: Params) =>this.clickMessage = "qqqq" + params['id'])
-    .subscribe(()=>0);
-  }
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router)
+        // private authenticationService: AuthenticationService,
+        // private alertService: AlertService) 
+        { }
 
-  goBack(): void {
-    this.location.back();
-  }
+    ngOnInit() {
+        // reset login status
+        // this.authenticationService.logout();
+
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/main';
+        console.log("return url ,.....",this.returnUrl);
+    }
+
+    login() {
+        this.loading = true;
+        // this.authenticationService.login(this.model.username, this.model.password)
+        //     .subscribe(
+        //         data => {
+        //             this.router.navigate([this.returnUrl]);
+        //         },
+        //         error => {
+        //             this.alertService.error(error);
+        //             this.loading = false;
+        //         });
+
+        this.router.navigate([this.returnUrl]);
+    }
 }

@@ -16,11 +16,7 @@ const contentRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(contentRoutes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [    RouterModule.forChild(contentRoutes)  ],
+  exports: [    RouterModule  ]
 })
 export class contentRoutingModule { }
