@@ -35,18 +35,18 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                     })));
                 } else {
                     // 这里随便返回点什么，就当登录成功了
-                    connection.mockRespond(new Response(new ResponseOptions({
-                        status: 200,
-                        body: {
-                            id: 1,
-                            username: params.username,
-                            firstName: "steve",
-                            lastName: "hsu",
-                            token: 'fake-jwt-token'
-                        }
-                    })));
+                    // connection.mockRespond(new Response(new ResponseOptions({
+                    //     status: 200,
+                    //     body: {
+                    //         id: 1,
+                    //         username: params.username,
+                    //         firstName: "steve",
+                    //         lastName: "hsu",
+                    //         token: 'fake-jwt-token'
+                    //     }
+                    // })));
                     // else return 400 bad request
-                    // connection.mockError(new Error('用户名或者密码不正确'));
+                    connection.mockError(new Error('用户名或者密码不正确'));
                 }
 
                 return;

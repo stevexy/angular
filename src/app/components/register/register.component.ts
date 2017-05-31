@@ -5,7 +5,7 @@ import { AlertService, UserService } from '../_services/index';
 
 @Component({
     moduleId: module.id.toString(),
-    templateUrl: 'register.component.html'
+    template: require('./register.component.html')
 })
 
 export class RegisterComponent {
@@ -22,7 +22,7 @@ export class RegisterComponent {
         this.userService.create(this.model)
             .subscribe(
                 data => {
-                    this.alertService.success('Registration successful', true);
+                    this.alertService.success('注册成功', true);
                     this.router.navigate(['/login']);
                 },
                 error => {
