@@ -6,7 +6,8 @@ import { HttpModule } from '@angular/http';
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
-import {AlertComponent} from '../alert/alert.component';
+// import {AlertComponent} from '../alert/alert.component';
+import { AlertShareModule } from '../alert/alert.shared.module';
 
 import { AlertService, AuthenticationService, UserService } from '../_services/index';
 
@@ -19,11 +20,11 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
     CommonModule,
     FormsModule,
     HttpModule,
-    RegisterRoutingModule
+    RegisterRoutingModule,
+    AlertShareModule
   ],
   declarations: [
-    RegisterComponent,
-    AlertComponent
+    RegisterComponent
   ],
   providers: [
     AlertService,
