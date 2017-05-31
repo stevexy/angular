@@ -1,22 +1,39 @@
-import { NgModule }       from '@angular/core';
-import { CommonModule }   from '@angular/common';
-import { FormsModule }    from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BaseRequestOptions } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
-import { LoginComponent }    from './login.component';
+import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
+import {AlertComponent} from '../alert/alert.component';
+
+import { AlertService, AuthenticationService, UserService } from '../_services/index';
+
+import { fakeBackendProvider } from '../_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    LoginRoutingModule
+    LoginRoutingModule,
+    HttpModule
   ],
   declarations: [
-    LoginComponent
+    LoginComponent,
+    AlertComponent
   ],
-  providers: [  ]
+  providers: [
+    AlertService,
+    AuthenticationService,
+    UserService,
+    fakeBackendProvider,
+    MockBackend,
+    BaseRequestOptions]
 })
-export class LoginDialogModule {}
+export class LoginDialogModule { }
 
 
 /*

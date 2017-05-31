@@ -17,10 +17,11 @@
     left: 0;
     background-color: #CFD8DC;
     padding: .3em 0;
-    height: 1.6em;
+    height: 2.0em;
+    font-size: 1.15em;
     color: white;
     width: 8em;
-    margin: 0.02em;
+    margin: 0.05em;
     border-radius: 8px; /* FIXME hardcoded value :-/ */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
