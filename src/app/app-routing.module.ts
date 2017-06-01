@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: 'app/components/main/main.module#MainModule',
     canActivate: [AuthGuard]
   },
-  // { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
   { 
     path: 'register', 
     loadChildren: 'app/components/register/register.module#RegisterModule'
