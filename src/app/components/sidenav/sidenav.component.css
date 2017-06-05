@@ -1,5 +1,6 @@
 .selected {
     background-color: #CFD8DC !important;
+    
     color: white;
 }
 
@@ -15,11 +16,11 @@
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #CFD8DC;
+    background-color: #7F5934;
     padding: .3em 0;
     height: 2.0em;
     font-size: 1.15em;
-    color: white;
+    color: #DEBF81;
 }
 
 .sidebar {
@@ -31,21 +32,21 @@
 }
 
 .menulist li.selected {
-    background-color: #BBD8DC !important;
-    color: gray;
+    background-color: #83AC3E !important;
+    color: #DEBF81;
     cursor: default;
     text-shadow: 0px 0px 0px #000;
 }
 
 .menulist li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: gray;
+    background-color: #DCB37A !important;
+    color: #DEBF81;
     cursor: default;
 }
 
 .menulist li.unselected:hover {
-    color: #607D8B;
-    background-color: #DDD;
+    color: #DEBF81;
+    background-color: #CCA36A;
     left: .1em;
 }
 

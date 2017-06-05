@@ -1,5 +1,4 @@
 .pftable {
-  /*font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
   width: 100%;
   border-collapse: collapse;
 }
@@ -13,7 +12,7 @@
   border-bottom-style:solid;
   border-left-style:none;
   padding: 3px 7px 2px 7px;
-  background-color: #dddddd;
+  background-color: #DEBF81;
 }
 
 .pftable th {

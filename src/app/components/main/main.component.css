@@ -9,9 +9,9 @@
 
 .top {
     height: 5em;
-    background-color: #CFD8DC;
+    background-color: #382517;
     text-align: center;
-    color: #fff;
+    color: #a07c4c;
 }
 
 .title {
@@ -28,7 +28,7 @@
 .bottom {
     height: 2em;
     float: bottom;
-    background-color: #CFD8DC;
+    background-color: #CCA36A;
 }
 
 .license {
@@ -51,7 +51,7 @@
 .left {
     width: 8em;
     height: 100%;
-    background-color: #C0D0D0;
+    background-color: #7F5934;
 }
 
 .content {
@@ -62,5 +62,5 @@
     right: 0em;
     top: 0em;
     overflow-y: auto;
-    background-color: gray;
+    background-color: #CCA36A;
 }

@@ -1,7 +1,7 @@
-import {Component, Input, Output, EventEmitter, ElementRef, ViewChild} from "@angular/core";
+import { Component, Input, Output, EventEmitter, ElementRef, ViewChild } from "@angular/core";
 
 @Component({
-    selector: "modal-header",
+    selector: "modal-headerx",
     template: `<ng-content></ng-content>`
 })
 export class ModalHeader {
@@ -9,7 +9,7 @@ export class ModalHeader {
 }
 
 @Component({
-    selector: "modal-content",
+    selector: "modal-contentx",
     template: `<ng-content></ng-content>`
 })
 export class ModalContent {
@@ -17,7 +17,7 @@ export class ModalContent {
 }
 
 @Component({
-    selector: "modal-footer",
+    selector: "modal-footerx",
     template: `<ng-content></ng-content>`
 })
 export class ModalFooter {
@@ -38,16 +38,16 @@ export class ModalFooter {
     <div [class]="'modal-dialog ' + modalClass" (click)="preventClosing($event)">
         <div class="modal-content" tabindex="0" *ngIf="isOpened">
             <div class="modal-header">
-                <button *ngIf="!hideCloseButton" type="button" class="close" data-dismiss="modal" [attr.aria-label]="cancelButtonLabel || 'Close'" (click)="close()"><span aria-hidden="true">&times;</span></button>
+                <button *ngIf="!hideCloseButton" type="button" class="close"  [attr.aria-label]="cancelButtonLabel || 'Close'" (click)="close()"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" *ngIf="title">{{ title }}</h4>
-                <ng-content select="modal-header"></ng-content>
+                <ng-content select="modal-headerx"></ng-content>
             </div>
             <div class="modal-body">
-                <ng-content select="modal-content"></ng-content>
+                <ng-content select="modal-contentx"></ng-content>
             </div>
             <div class="modal-footer">
-                <ng-content select="modal-footer"></ng-content>
-                <button *ngIf="cancelButtonLabel" type="button" class="btn btn-default" data-dismiss="modal" (click)="close()">{{ cancelButtonLabel }}</button>
+                <ng-content select="modal-footerx"></ng-content>
+                <button *ngIf="cancelButtonLabel" type="button" class="btn btn-default" (click)="close()">{{ cancelButtonLabel }}</button>
                 <button *ngIf="submitButtonLabel" type="button" class="btn btn-primary" (click)="onSubmit.emit(undefined)">{{ submitButtonLabel }}</button>
             </div>
         </div>
@@ -83,7 +83,7 @@ export class Modal {
     public submitButtonLabel: string;
 
     @Input()
-    public backdrop:boolean = true;
+    public backdrop: boolean = true;
 
     // -------------------------------------------------------------------------
     // Outputs
@@ -138,7 +138,8 @@ export class Modal {
     open(...args: any[]) {
         if (this.isOpened)
             return;
-        
+
+        console.log("dialog open --before", document.body);
         this.isOpened = true;
         this.onOpen.emit(args);
         document.body.appendChild(this.backdropElement);
@@ -168,7 +169,7 @@ export class Modal {
         this.backdropElement = document.createElement("div");
         this.backdropElement.classList.add("fade");
         this.backdropElement.classList.add("in");
-        if(this.backdrop) {
+        if (this.backdrop) {
             this.backdropElement.classList.add("modal-backdrop");
         }
     }

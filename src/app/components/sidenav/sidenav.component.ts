@@ -54,6 +54,8 @@ export class SideNavComponent implements OnInit {
 
     if (mi.id == 4)
       this.router.navigate(['/main/profixs']);
+    else if (mi.id == 1)
+      this.router.navigate(['/main/gamesubs']);
     else
       this.router.navigate(['/main/contentbox',mi.id]);
 

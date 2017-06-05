@@ -9,9 +9,6 @@ const contentRoutes: Routes = [
   {
     path: '',
     component: profitcheckComponent,
-    // children: [
-    //   { path: '', component: profitcheckComponent }
-    // ]
   }
 ];
 

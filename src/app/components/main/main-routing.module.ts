@@ -7,14 +7,22 @@ import { MainComponent } from './main.component';
 const mainRoutes: Routes = [
   {
     path: '', component: MainComponent,
-    children: [{
-      path: 'contentbox', component: ContentComponent
-    },
-    { path: 'contentbox/:id', component: ContentComponent },
-    {
-      path: 'profixs',
-      loadChildren: 'app/components/profit/tabmenu.module#TabmenuModule'
-    }]
+    children: [
+      {
+        path: 'contentbox', component: ContentComponent
+      },
+      {
+        path: 'contentbox/:id', component: ContentComponent
+      },
+      {
+        path: 'profixs',
+        loadChildren: 'app/components/profit/tabmenu.module#TabmenuModule'
+      },
+      {
+        path: 'gamesubs',
+        loadChildren: 'app/components/gamesubs/gamesubs.module#GamesubsModule'
+      }
+    ]
   }
   // { path: 'contentbox', component: ContentComponent },
   // { path: 'contentbox/:id', component: ContentComponent },
