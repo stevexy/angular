@@ -19,10 +19,10 @@ const routes: Routes = [
     path: 'register', 
     loadChildren: 'app/components/register/register.module#RegisterModule'
   },
-  {
-    path: 'test',
-    loadChildren: 'app/components/testmodal/testmodal.module#TestModalModule'
-  }
+  // {
+  //   path: 'test',
+  //   loadChildren: 'app/components/testmodal/testmodal.module#TestModalModule'
+  // }
 
 ];
 
