@@ -16,4 +16,5 @@ export class Tab {
   @Input() title: string;
   active: boolean = false;
   name: string;
+  comp: any;
 }
