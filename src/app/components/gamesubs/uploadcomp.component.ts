@@ -27,6 +27,7 @@ export class UploadComp implements AfterViewInit{
 
   @ViewChild("myCanvas") canvasRef: ElementRef;
   @ViewChild('myImage') aimg: ElementRef;
+  @ViewChild('myFile') afile: ElementRef;
 
   onSubmit() { this.submitted = true; }
 
@@ -124,6 +125,11 @@ export class UploadComp implements AfterViewInit{
     }
   }
 
+  uploadClick()
+  {
+    console.log("click click click");
+    // this.afile.nativeElement.click();
+  }
   //////// NOT SHOWN IN DOCS ////////
 
   // Reveal in html:

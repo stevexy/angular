@@ -23,8 +23,8 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-3">
-                        <label for="limage" [style.cursor]="'pointer'">图片</label>
-                        <input type='file' (change)="readUrl($event)" id="upload-photo" [style.opacity]="0" [style.position]="'obsolute'" [style.zindex]="-1">
+                        <label for="upload-photo" (click)="uploadClick()" [style.cursor]="'pointer'">点击选择图片</label>
+                        <input #myFile type='file' (change)="readUrl($event)" id="upload-photo" [style.display]="'none'" [style.position]="'obsolute'" [style.zindex]="-1">
                     </div>
                     <div class="col-md-3" [style.display]="'none'">
                         <a class="img-thumbnail">
