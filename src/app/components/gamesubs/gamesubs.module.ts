@@ -11,8 +11,10 @@ import { CheckedComp } from './checked.component';
 import { UncheckComp } from './unchecked.component';
 import { CheckingComp } from './checking.component';
 import { FailComp } from './failed.component';
-
+import { DetailComp } from './detail.component';
 import { UploadComp } from './uploadcomp.component';
+import { CheckedEditComp } from './checkededit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,10 +26,12 @@ import { UploadComp } from './uploadcomp.component';
         UncheckComp,
         CheckingComp,
         FailComp,
-        UploadComp
+        UploadComp,
+        DetailComp,
+        CheckedEditComp,
     ],
     entryComponents: [CheckedComp,UncheckComp,CheckingComp,FailComp,UploadComp],
-    imports: [CommonModule, GamesubsRoutingModule],
+    imports: [CommonModule, GamesubsRoutingModule,FormsModule],
     exports: [GamesubsComponent]
 })
 export class GamesubsModule { }

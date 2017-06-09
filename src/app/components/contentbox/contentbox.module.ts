@@ -1,6 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
-import { FormsModule }    from '@angular/forms';
+
 
 import { ContentComponent }    from './contentbox.component';
 import { contentRoutingModule } from './contentbox-routing.module';
@@ -8,7 +8,6 @@ import { contentRoutingModule } from './contentbox-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     contentRoutingModule
   ],
   declarations: [

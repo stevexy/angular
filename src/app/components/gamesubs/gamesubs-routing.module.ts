@@ -3,16 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { Tabset } from './tabs.component';
 import { GamesubsComponent } from './gamesubs.component';
+import { DetailComp } from './detail.component';
+import { CheckedEditComp } from './checkededit.component';
 
 
 const profitRoutes: Routes = [
   {
     path: '',
     component: GamesubsComponent
-    // children: [
-    //   { path: '', component: profitcheckComponent, }
-    // ]
   },
+  {
+    path: 'detail/:id', component: DetailComp
+  },
+
+  {
+    path: 'detailedit/:id', component: CheckedEditComp
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,72 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>基本信息</h1>
+        <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+            <div class="form-group">
+                <label for="name">组件名称</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    必须输入名称
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="alterEgo">组件ID</label>
+                <input type="text" class="form-control-static" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+            </div>
+
+            <div class="form-group">
+                <label for="ldate">时间</label>
+                <input type="date" id="myDate" value="2014-06-01">
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="limage" [style.cursor]="'pointer'">图片</label>
+                        <input type='file' (change)="readUrl($event)" id="upload-photo" [style.opacity]="0" [style.position]="'obsolute'" [style.zindex]="-1">
+                    </div>
+                    <div class="col-md-3" [style.display]="'none'">
+                        <a class="img-thumbnail">
+                        <img #myImage [src]="url" [style.max-height.px]="100">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <canvas #myCanvas id="myCanvas" width="100" height="100" style="background:rgba(0,0,0,0);"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="power">组件版本</label>
+                <select class="form-control" id="power" required [(ngModel)]="model.power" name="power" #power="ngModel">
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+                <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+                    Power is required
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+        <div class="col-xs-3">Name</div>
+        <div class="col-xs-9  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3">Alter Ego</div>
+        <div class="col-xs-9 pull-left">{{ model.alterEgo }}</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3">Power</div>
+        <div class="col-xs-9 pull-left">{{ model.power }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>

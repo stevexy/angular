@@ -28,14 +28,15 @@ export class tabmenuComponent implements OnInit {
   @ContentChildren(MenuItem) li: QueryList<MenuItem>;
 
   menulist = MENULIST;
-
   selectedItem: MenuItem;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private tabmenuService: TabmenuService
   ) { }
+
   ngOnInit(): void {
   }
 

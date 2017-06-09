@@ -19,7 +19,7 @@ export class GamesubsComponent {
             { title: '已审核', content: '已经审核的内容', comp: UncheckComp },
             { title: '审核中', content: '正在审核中', comp: CheckingComp },
             { title: '未审核', content: '还没通过审核列表', comp: FailComp },
-            { title: '上传新组建', content: 'upload new component', comp: UploadComp },
+            { title: '上传新组件', content: 'upload new component', comp: UploadComp },
         ];
     }
 }
